@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="JavascriptFile.js" defer></script>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="icon" href="images\logo-removebg-preview.png" type="icon">
+  <title>Apex Hotel</title>
+</head>
+
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <nav id="navbar">
+    
+    <a href="#" class="nav-logo"><img src="images\logo-removebg-preview.png" width="50px;" alt="Apex Hotel Logo" class="nav-logo-img">APEX<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book
+      Now</button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <section id='hero'>
+    <div class="hero-overlay"></div>
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos\02177306088299700000000000000000000ffffc0a8ac5d5af4e1.mp4" type="video/mp4">
+      Your browser does not support the background video.
+    </video>
+    <div class="hero-content">
+      <div class="stars" aria-label="5 star rating">
+        <span aria-hidden="true">★</span>
+        <span aria-hidden="true">★</span>
+        <span aria-hidden="true">★</span>
+        <span aria-hidden="true">★</span>
+        <span aria-hidden="true">★</span>
+      </div>
+      <p class="hero-eyebrow">Est. 2010 · Five Stars · Cairo</p>
+      <div class="hero-title">
+        <h1>APEX</h1>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn-stay"
+          onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Reserve Your
+          Stay</button>
+        <button class="btn-rooms" onclick="document.getElementById('rooms').scrollIntoView({behavior:'smooth'})">Explore
+          Rooms</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="booking-inner">
+      <div class="booking-header">
+        <p class="section-label" style="justify-content:center;">Reserve</p>
+        <h2 class="section-title" style="text-align:center;">Check <em>Availability</em></h2>
+      </div>
+      <form class="booking-form" id="booking-form">
+        <div class="form-field">
+          <label for="checkin">Check In</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="form-field">
+          <label for="checkout">Check Out</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+        <div class="form-field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option>1 Guest</option>
+            <option selected>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="room-type">Room Type</label>
+          <select id="room-type" name="room-type">
+            <option>Any Room</option>
+            <option>Deluxe Room</option>
+            <option>Junior Suite</option>
+            <option>Royal Suite</option>
+            <option>Penthouse</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="promo">Promo Code</label>
+          <input type="text" id="promo" name="promo" placeholder="Optional">
+        </div>
+        <button type="submit" class="book-btn"><span class="btn-label">Search</span><span class="btn-spinner" aria-hidden="true"></span></button>
+      </form>
+      <span id="booking-msg" class="form-message" role="status" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section id="rooms">
+    <div class="rooms-header reveal">
+      <h2 class="section-title" style="justify-self: center;">Our <em>Rooms</em> &amp; Suites</h2>
+    </div>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="rooms-section" id="rooms-suites">
+            <div class="rooms-header">
+              <div>
+                <h2 class="room-name">Apex <em>Suites</em></h2>
+                <p class="room-address">The pinnacle of luxury — panoramic views &amp; private terraces</p>
+              </div>
+              <span class="room-count">03</span>
+            </div>
+            <div class="units-grid">
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douplex/rooms_4173-kopya_7_11zon.webp"
+                data-title="Duplex Suite" data-price="From $890 / night"
+                data-desc="A two-level sanctuary crowned by panoramic city views, our Duplex Suite pairs a private upstairs bedroom with a sunken lounge and terrace — the most exclusive address in the hotel."
+                data-size="140 m²" data-bed="King + Lounge" data-view="Panoramic City"
+                data-amenities="Private Terrace, Butler Service, Marble Bath, Nespresso Bar">
+                <div class="unit-img-wrap">
+                  <img src="images/douplex/rooms_4173-kopya_7_11zon.webp"
+                    alt="Duplex Suite living area with panoramic city view" loading="lazy">
+                  <span class="status-badge signature">Signature</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Duplex Suite</h3>
+                  <p class="unit-number">From $890 / night</p>
+                </div>
+              </div>
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/single/rooms_3895-rev-kopya_5_11zon.webp"
+                data-title="Junior Suite" data-price="From $540 / night"
+                data-desc="Wake up to the sea from a plush king bed in this light-filled suite, complete with a separate sitting area and a spa-inspired bathroom."
+                data-size="70 m²" data-bed="King" data-view="Sea View"
+                data-amenities="Private Balcony, Rain Shower, Minibar, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/single/rooms_3895-rev-kopya_5_11zon.webp" alt="Junior Suite bedroom with sea view"
+                    loading="lazy">
+                  <span class="status-badge sea-view">&#10003; Sea View</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Junior Suite</h3>
+                  <p class="unit-number">From $540 / night</p>
+                </div>
+              </div>
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douple/rooms_4306-kopya_2_11zon.webp"
+                data-title="Twin Suite" data-price="From $480 / night"
+                data-desc="Ideal for friends or family, this generous suite offers two plush queen beds and a shared lounge space without compromising on suite-level luxury."
+                data-size="65 m²" data-bed="Twin Queen" data-view="Garden"
+                data-amenities="Lounge Area, Walk-in Closet, Rain Shower, Minibar">
+                <div class="unit-img-wrap">
+                  <img src="images/douple/rooms_4306-kopya_2_11zon.webp" alt="Twin Suite with two beds" loading="lazy">
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Twin Suite</h3>
+                  <p class="unit-number">From $480 / night</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="rooms-section" id="rooms-deluxe">
+            <div class="rooms-header">
+              <div>
+                <h2 class="room-name">Apex <em>Deluxe</em></h2>
+                <p class="room-address">Spacious elegance with balcony &amp; garden views</p>
+              </div>
+              <span class="room-count">03</span>
+            </div>
+            <div class="units-grid">
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douple/rooms_4281-kopya_3_11zon.webp"
+                data-title="Deluxe King Room" data-price="From $320 / night"
+                data-desc="Spacious and sun-lit, the Deluxe King Room opens onto a private balcony with sweeping garden views, finished with warm wood tones and marble accents."
+                data-size="45 m²" data-bed="King" data-view="Garden Balcony"
+                data-amenities="Private Balcony, Espresso Machine, Rain Shower, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/douple/rooms_4281-kopya_3_11zon.webp" alt="Deluxe King Room with balcony"
+                    loading="lazy">
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Deluxe King Room</h3>
+                  <p class="unit-number">From $320 / night</p>
+                </div>
+              </div>
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douple/rooms_4266-kopya_4_11zon.webp"
+                data-title="Deluxe Garden View" data-price="From $350 / night"
+                data-desc="Framed by lush landscaped gardens, this deluxe room offers a serene retreat with a plush reading nook and an oversized soaking tub."
+                data-size="48 m²" data-bed="King" data-view="Garden"
+                data-amenities="Soaking Tub, Reading Nook, Minibar, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/douple/rooms_4266-kopya_4_11zon.webp" alt="Deluxe Garden View room" loading="lazy">
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Deluxe Garden View</h3>
+                  <p class="unit-number">From $350 / night</p>
+                </div>
+              </div>
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douple/rooms_4306-kopya_2_11zon.webp"
+                data-title="Deluxe Twin Room" data-price="From $300 / night"
+                data-desc="Two comfortable queen beds and warm, understated decor make this room a favorite for colleagues and small families alike."
+                data-size="42 m²" data-bed="Twin Queen" data-view="Courtyard"
+                data-amenities="Work Desk, Minibar, Rain Shower, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/douple/rooms_4306-kopya_2_11zon.webp" alt="Deluxe Twin Room" loading="lazy">
+                  <span class="status-badge limited">Limited</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Deluxe Twin Room</h3>
+                  <p class="unit-number">From $300 / night</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="rooms-section" id="rooms-standard">
+            <div class="rooms-header">
+              <div>
+                <h2 class="room-name">Apex <em>Standard</em></h2>
+                <p class="room-address">Comfort &amp; style — all the essentials for a perfect stay</p>
+              </div>
+              <span class="room-count">02</span>
+            </div>
+            <div class="units-grid">
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/single/rooms_4394-rev2-kopya_11_11zon.webp"
+                data-title="Standard King Room" data-price="From $180 / night"
+                data-desc="Thoughtfully designed for comfort and value, this room delivers a plush king bed and all the essentials for a relaxing stay."
+                data-size="32 m²" data-bed="King" data-view="City"
+                data-amenities="Work Desk, Minibar, Rain Shower, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/single/rooms_4394-rev2-kopya_11_11zon.webp" alt="Standard King Room" loading="lazy">
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Standard King Room</h3>
+                  <p class="unit-number">From $180 / night</p>
+                </div>
+              </div>
+
+              <div class="unit-card" tabindex="0" role="button"
+                data-img="images/douple/rooms_4250-kopya_1_11zon.webp"
+                data-title="Standard Garden Room" data-price="From $200 / night"
+                data-desc="A cozy retreat overlooking our landscaped grounds, offering everything you need for a comfortable, well-priced stay."
+                data-size="34 m²" data-bed="Queen" data-view="Garden"
+                data-amenities="Garden View, Minibar, Rain Shower, Smart TV">
+                <div class="unit-img-wrap">
+                  <img src="images/douple/rooms_4250-kopya_1_11zon.webp" alt="Standard Garden Room" loading="lazy">
+                  <span class="status-badge available">Available</span>
+                </div>
+                <div class="unit-body">
+                  <h3 class="unit-title">Standard Garden Room</h3>
+                  <p class="unit-number">From $200 / night</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SERVICES
+============================================================ -->
+  <section id="services">
+    <div class="services-inner">
+      <div class="services-header reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">World-Class <em>Services</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <img class="service-bg" src="images/services/fine-dining.jpg" alt="Fine dining restaurant interior" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Fine Dining</h3>
+            <p class="service-desc">Three Michelin-starred restaurant helmed by Chef Jean-Pierre Moreau. Farm-to-table
+              cuisine with Egyptian and French influences, paired with our cellar of over 3,000 wines.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <img class="service-bg" src="images/services/infinity-pool.jpg" alt="Rooftop infinity pool overlooking the Nile" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Infinity Pool</h3>
+            <p class="service-desc">A heated rooftop infinity pool with panoramic views of the Nile. Open 24 hours for our
+              guests, with private cabanas and expert poolside service.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <img class="service-bg" src="images/services/luxury-spa.jpg" alt="Luxury spa treatment room" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Luxury Spa</h3>
+            <p class="service-desc">A sanctuary of 2,400 m² featuring 22 treatment rooms, a hammam, and therapies drawing
+              from ancient Egyptian healing traditions and modern wellness science.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <img class="service-bg" src="images/services/concierge.jpg" alt="Concierge assisting a guest with luxury transport" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Concierge &amp; Transport</h3>
+            <p class="service-desc">24/7 personal concierge service. Complimentary Rolls-Royce airport transfers, private
+              yacht charters, and helicopter excursions over the pyramids available upon request.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <img class="service-bg" src="images/services/events-weddings.jpg" alt="Elegant event space set up for a wedding" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Events &amp; Weddings</h3>
+            <p class="service-desc">Six bespoke event spaces accommodating from 10 to 1,000 guests. Our event architects
+              curate every detail — from intimate soirées to grand celebrations.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <img class="service-bg" src="images/services/fitness-wellness.jpg" alt="Fitness centre with modern equipment" loading="lazy">
+          <div class="service-overlay"></div>
+          <div class="service-body">
+            <h3 class="service-title">Fitness &amp; Wellness</h3>
+            <p class="service-desc">A state-of-the-art fitness centre with private training sessions, yoga studios, and an
+              Olympic-length lap pool. Your wellness journey, personalized.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     GALLERY
+============================================================ -->
+  <section id="gallery" class="gallery-section">
+    <div class="gallery-inner">
+      <div class="gallery-header reveal">
+        <div>
+          <p class="section-label">Gallery</p>
+          <h2 class="section-title">Life at <em>Apex</em></h2>
+        </div>
+        <a href="#" class="gallery-view-all">View All Photos →</a>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item reveal" style="grid-column: span 5;" tabindex="0" role="button"
+          data-img="images\gallery\happy-famile.jpg" data-title="happy family enjoying their stay at Apex Hotel">
+          <img src="images\gallery\happy-famile.jpg" alt="family" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1" style="grid-column: span 4;" tabindex="0" role="button"
+          data-img="images\gallery\good-sevice.jpg" data-title="good service at Apex Hotel">
+          <img src="images\gallery\good-sevice.jpg" alt="service" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2" style="grid-column: span 3;" tabindex="0" role="button"
+          data-img="images\gallery\luxery-honeymool.jpg" data-title="Rooftop Pool">
+          <img src="images\gallery\luxery-honeymool.jpg" alt="Rooftop Pool" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+        <div class="gallery-item reveal" style="grid-column: span 3;" tabindex="0" role="button"
+          data-img="images\gallery\break-fast.jpg" data-title="Breakfast">
+          <img src="images\gallery\break-fast.jpg" alt="Breakfast" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1" style="grid-column: span 5;" tabindex="0" role="button"
+          data-img="images\gallery\spa.jpg" data-title="Luxury Spa">
+          <img src="images\gallery\spa.jpg" alt="Luxury Spa" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2" style="grid-column: span 4;" tabindex="0" role="button"
+          data-img="images\gallery\house-keeping.jpg" data-title="Royal Suite">
+          <img src="images\gallery\house-keeping.jpg" alt="Royal Suite" loading="lazy">
+          <div class="gallery-overlay"><span class="gallery-zoom" aria-hidden="true">+</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TRUST STRIP
+============================================================ -->
+  <section class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item reveal">
+        <span class="trust-rating" data-count-to="4.9" data-decimals="1">0</span>
+        <p class="trust-label">Overall Rating</p>
+        <p class="trust-source">Booking.com · 2,847 reviews</p>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal reveal-delay-1">
+        <span class="trust-rating">#1</span>
+        <p class="trust-label">Luxury Hotel Cairo</p>
+        <p class="trust-source">TripAdvisor · 2024</p>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal reveal-delay-2">
+        <span class="trust-rating">★★★★★</span>
+        <p class="trust-label">Forbes Five Star</p>
+        <p class="trust-source">Since 2015</p>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item reveal">
+        <span class="trust-rating" data-count-to="15" data-suffix="+">0</span>
+        <p class="trust-label">International Awards</p>
+        <p class="trust-source">Luxury Travel Awards</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="testimonials-inner">
+      <div class="reveal">
+        <p class="section-label">Reviews</p>
+        <h2 class="section-title">Our <em>Guests</em> Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars-small" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-text">"An extraordinary experience from arrival to departure. The service is impeccable
+            and the rooms breathtaking. Apex redefined what luxury means to me."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">S</div>
+            <div>
+              <p class="author-name">Sofia Papadopoulos</p>
+              <p class="author-origin">Athens, Greece</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="stars-small" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-text">"We celebrated our anniversary at Apex and it was absolute perfection. The suite,
+            the dinner, the staff — unmatched in every sense of the word."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">J</div>
+            <div>
+              <p class="author-name">James Whitmore</p>
+              <p class="author-origin">London, UK</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="stars-small" aria-label="5 star rating">★★★★★</div>
+          <p class="testimonial-text">"The spa alone is worth flying across the world for. They anticipate every wish
+            before you even know you have it. Pure, flawless luxury."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">L</div>
+            <div>
+              <p class="author-name">Layla Al-Rashid</p>
+              <p class="author-origin">Dubai, UAE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CONTACT
+============================================================ -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Get In <em>Touch</em></h2>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">📍</div>
+            <div>
+              <p class="detail-label">Address</p>
+              <p class="detail-value">1 Apex Boulevard, Corniche Road<br>Cairo, Egypt 11511</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">📞</div>
+            <div>
+              <p class="detail-label">Phone</p>
+              <p class="detail-value">+20 (2) 1234 5678<br>24/7 Concierge Service</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">✉️</div>
+            <div>
+              <p class="detail-label">Email</p>
+              <p class="detail-value">reservations@apexhotel.com<br>concierge@apexhotel.com</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="detail-icon" aria-hidden="true">🕐</div>
+            <div>
+              <p class="detail-label">Check-in / Check-out</p>
+              <p class="detail-value">Check-in: 3:00 PM<br>Check-out: 12:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <h3 class="contact-form-title">Send Us a <em>Message</em></h3>
+        <form id="contact-form" class="contact-form">
+          <div class="input-row">
+            <div class="input-group">
+              <label for="first-name" class="sr-only">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            </div>
+            <div class="input-group">
+              <label for="last-name" class="sr-only">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="contact-email" class="sr-only">Email Address</label>
+            <input type="email" id="contact-email" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="input-group">
+            <label for="contact-phone" class="sr-only">Phone Number</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="Phone Number">
+          </div>
+          <div class="input-group">
+            <label for="contact-subject" class="sr-only">Subject</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" disabled selected>Subject</option>
+              <option>Room Reservation</option>
+              <option>Event / Wedding</option>
+              <option>Spa Booking</option>
+              <option>Dining Reservation</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="contact-message" class="sr-only">Your message</label>
+            <textarea id="contact-message" name="message" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn"><span class="btn-label">Send Message</span><span class="btn-spinner" aria-hidden="true"></span></button>
+          <span id="contact-msg" class="form-message" role="status" aria-live="polite"></span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">APEX<span>.</span></a>
+          <p class="footer-tagline">Redefining luxury hospitality since 2010.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" class="social-link">IG</a>
+            <a href="#" aria-label="Facebook" class="social-link">FB</a>
+            <a href="#" aria-label="Twitter" class="social-link">TW</a>
+            <a href="#" aria-label="LinkedIn" class="social-link">IN</a>
+          </div>
+        </div>
+        <div class="footer-nav-cols">
+          <div class="footer-col">
+            <h4 class="footer-col-title">Stay</h4>
+            <a href="#rooms">Rooms &amp; Suites</a>
+            <a href="#booking">Reservations</a>
+            <a href="#services">Amenities</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Discover</h4>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#services">Dining</a>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Connect</h4>
+            <a href="#contact">Contact Us</a>
+            <a href="#">Press</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Apex Hotel. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
